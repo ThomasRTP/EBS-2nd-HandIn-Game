@@ -163,7 +163,7 @@ function changeLevel (levelNum: number) {
             _2ndEnemy.follow(MrPoopyButthole, 20)
         }
         tiles.setTilemap(tilemap`level2`)
-        scene.setBackgroundColor(13)
+        scene.setBackgroundColor(7)
         tiles.placeOnRandomTile(MrPoopyButthole, sprites.dungeon.stairLarge)
     } else if (levelNum == 2) {
         info.changeScoreBy(-4)
@@ -260,6 +260,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
         game.splash("A stair appeared. But where does it lead? Hurry ! ")
         tiles.setTilemap(tilemap`lvl 1-2`)
         scene.cameraShake(4, 500)
+    }
+    if (currentLevel == 1 && info.score() >= 4) {
+        pause(100)
+        game.splash("Stairs have appeared again - it may be a way out?")
+        tiles.setTilemap(tilemap`level2-2`)
     }
     if (currentLevel == 2 && info.score() >= 4) {
         pause(100)

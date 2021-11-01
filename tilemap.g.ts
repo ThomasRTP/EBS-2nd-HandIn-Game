@@ -5,25 +5,6 @@ namespace myTiles {
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "level2":
-            case "level2":return tiles.createTilemap(hex`100010000c0c0c0c011c151b1b16010101010101010101010118171c1b1601010101010101010101010302171d1601000d0d0d0d0d0d0d0d010302041c1401010101010101010101010302021917010101010101011f01010103020202040101010101010101011f010302020204010101010101010101010103021f0204091e1e0f0e0a0101010101030202020407101210120601010101010302020204071012101006010101010103021f0204071010111013010101010103020202040712101111130101010101031f021f040711101211060d0d0d010103020202040712111111060d0d0d0d010302020204080b0f0f0e051a010101010302020204010101010101`, img`
-2 2 2 2 . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . 2 2 2 2 2 
-2 2 2 2 . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. 2 . . . . . . . . . . . . . . 
-. . . 2 . . . . . . . . . . . . 
-. . . . . . . 2 . . 2 2 2 . . 2 
-. . . . . . . . . . 2 . . . . 2 
-. . . . . . . . . . 2 . . . . 2 
-. . . . . . . 2 . . 2 . . . . . 
-. . . . . . . . . . 2 . . . . . 
-. . . . . . 2 . 2 . 2 . . . . 2 
-2 2 2 . . . . . . . 2 . . . . 2 
-2 2 2 2 . . . . . . 2 2 2 2 2 2 
-. . . . . . . . . . . . . . . . 
-`, [myTiles.transparency16,sprites.castle.tileGrass1,sprites.castle.tilePath5,sprites.castle.tilePath4,sprites.castle.tilePath6,sprites.builtin.forestTiles15,sprites.builtin.forestTiles11,sprites.builtin.forestTiles9,sprites.builtin.forestTiles13,sprites.builtin.forestTiles5,sprites.builtin.forestTiles7,sprites.builtin.forestTiles27,sprites.builtin.forestTiles3,sprites.builtin.forestTiles4,sprites.builtin.forestTiles29,sprites.builtin.forestTiles28,sprites.castle.tileDarkGrass1,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,sprites.dungeon.stairWest,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundEast,sprites.castle.tilePath3,sprites.castle.tilePath1,sprites.castle.tilePath2,sprites.dungeon.stairLarge,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundWest,sprites.builtin.forestTiles6,sprites.castle.rock0], TileScale.Sixteen);
             case "level3":
             case "level3":return tiles.createTilemap(hex`1000100001010101010201010101030101010101010103010101040101020201030101010101020101010103010101010101030101010404060f12120f07010101010101010201040b01010102080203010101010103010411050501010e010101010103010101010b04010101080505010101010101010111011615010e010301010301010103030c01010101090201010103010101010111040401010e020101140101010101010c0102020109010101010101010101020d101717100a01030105010103030102010101010101010101010103010101010101030102010301050101031304010101010101010103010103010101040101030101010301010101010101`, img`
 . . . . . . . . . . . . . . . . 
@@ -138,6 +119,63 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, [myTiles.transparency16], TileScale.Sixteen);
+            case "level2":
+            case "level2":return tiles.createTilemap(hex`100010000c0c0c0c011b141a1a15010101010101010101010117161b1a1501010101010101010101010302161c1501000d0d0d0d0d0d0d0d010302041b1301010101010101010101010302021816010101010101011e01010103020202040101010101010101011e010302020204010101010101010101010103021e0204091d1d0f0e0a0101010101030202020407101210120601010101010302020204071012101006010101010103021e020407101011101f0101010101030202020407121011111f0101010101031e021e040711101211060d0d0d010103020202040712111111060d0d0d0d010302020204080b0f0f0e0519010101010302020204010101010101`, img`
+2 2 2 2 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 2 2 2 2 2 
+2 2 2 2 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 2 . . . . . . . . . . . . . . 
+. . . 2 . . . . . . . . . . . . 
+. . . . . . . 2 . . 2 2 2 . . 2 
+. . . . . . . . . . 2 . . . . 2 
+. . . . . . . . . . 2 . . . . 2 
+. . . . . . . 2 . . 2 . . . . 2 
+. . . . . . . . . . 2 . . . . 2 
+. . . . . . 2 . 2 . 2 . . . . 2 
+2 2 2 . . . . . . . 2 . . . . 2 
+2 2 2 2 . . . . . . 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . 
+`, [myTiles.transparency16,sprites.castle.tileGrass1,sprites.castle.tilePath5,sprites.castle.tilePath4,sprites.castle.tilePath6,sprites.builtin.forestTiles15,sprites.builtin.forestTiles11,sprites.builtin.forestTiles9,sprites.builtin.forestTiles13,sprites.builtin.forestTiles5,sprites.builtin.forestTiles7,sprites.builtin.forestTiles27,sprites.builtin.forestTiles3,sprites.builtin.forestTiles4,sprites.builtin.forestTiles29,sprites.builtin.forestTiles28,sprites.castle.tileDarkGrass1,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundEast,sprites.castle.tilePath3,sprites.castle.tilePath1,sprites.castle.tilePath2,sprites.dungeon.stairLarge,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundWest,sprites.builtin.forestTiles6,sprites.castle.rock0,sprites.builtin.forestTiles24], TileScale.Sixteen);
+            case "level8":
+            case "level8":return tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, [myTiles.transparency16], TileScale.Sixteen);
+            case "level2-2":
+            case "level7":return tiles.createTilemap(hex`100010000c0c0c0c011c151b1b16010101010101010101010118171c1b1601010101010101010101010302171d1601000d0d0d0d0d0d0d0d010302041c1401010101010101010101010302021917010101010101011f01010103020202040101010101010101011f010302020204010101010101010101010103021f0204091e1e0f0e0a0101010101030202020407101210120601010101010302020204071012101006010101010103021f0204071010111013010101010103020202040712101111130101010101031f021f040711101211060d0d0d010103020202040712111111060d0d0d0d010302020204080b0f0f0e051a010101010302020204010101010101`, img`
+2 2 2 2 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . 2 2 2 2 2 
+2 2 2 2 . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 2 . . . . . . . . . . . . . . 
+. . . 2 . . . . . . . . . . . . 
+. . . . . . . 2 . . 2 2 2 . . 2 
+. . . . . . . . . . 2 . . . . 2 
+. . . . . . . . . . 2 . . . . 2 
+. . . . . . . 2 . . 2 . . . . . 
+. . . . . . . . . . 2 . . . . . 
+. . . . . . 2 . 2 . 2 . . . . 2 
+2 2 2 . . . . . . . 2 . . . . 2 
+2 2 2 2 . . . . . . 2 2 2 2 2 2 
+. . . . . . . . . . . . . . . . 
+`, [myTiles.transparency16,sprites.castle.tileGrass1,sprites.castle.tilePath5,sprites.castle.tilePath4,sprites.castle.tilePath6,sprites.builtin.forestTiles15,sprites.builtin.forestTiles11,sprites.builtin.forestTiles9,sprites.builtin.forestTiles13,sprites.builtin.forestTiles5,sprites.builtin.forestTiles7,sprites.builtin.forestTiles27,sprites.builtin.forestTiles3,sprites.builtin.forestTiles4,sprites.builtin.forestTiles29,sprites.builtin.forestTiles28,sprites.castle.tileDarkGrass1,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,sprites.dungeon.stairWest,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundEast,sprites.castle.tilePath3,sprites.castle.tilePath1,sprites.castle.tilePath2,sprites.dungeon.stairLarge,sprites.dungeon.darkGroundCenter,sprites.dungeon.darkGroundSouthWest0,sprites.dungeon.darkGroundWest,sprites.builtin.forestTiles6,sprites.castle.rock0], TileScale.Sixteen);
         }
         return null;
     })
